@@ -1,7 +1,0 @@
-name: UB
-on: push
-jobs:
-  u:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ok

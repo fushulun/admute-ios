@@ -1,7 +1,0 @@
-name: MACLATEST
-on: push
-jobs:
-  m:
-    runs-on: macos-latest
-    steps:
-      - run: sw_vers && xcodebuild -version
