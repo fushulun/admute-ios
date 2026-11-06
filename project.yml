@@ -1,0 +1,53 @@
+name: AdMute
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    ENABLE_BITCODE: NO
+targets:
+  AdMute:
+    type: application
+    platform: iOS
+    sources:
+      - path: AdMute
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.admute
+        PRODUCT_NAME: AdMute
+        INFOPLIST_FILE: AdMute/Info.plist
+        CODE_SIGN_ENTITLEMENTS: AdMute/AdMute.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+    dependencies:
+      - target: AdMuteBlocker
+        embed: true
+  AdMuteBlocker:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: AdMuteBlocker
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.admute.blocker
+        PRODUCT_NAME: AdMuteBlocker
+        INFOPLIST_FILE: AdMuteBlocker/Info.plist
+        CODE_SIGN_ENTITLEMENTS: AdMuteBlocker/AdMuteBlocker.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+schemes:
+  AdMute:
+    build:
+      targets:
+        AdMute: all
+    run:
+      config: Debug
+    archive:
+      config: Release

@@ -1,0 +1,42 @@
+[
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*doubleclick.net"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*googlesyndication.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*googleadservices.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*amazon-adsystem.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*app.adjust.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*appsflyer.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*umeng.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*tanx.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*criteo.com"] },
+    "action": { "type": "block" }
+  },
+  {
+    "trigger": { "url-filter": ".*", "if-domain": ["*taboola.com"] },
+    "action": { "type": "block" }
+  }
+]
