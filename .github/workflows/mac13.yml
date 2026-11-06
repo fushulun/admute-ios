@@ -1,0 +1,7 @@
+name: MAC13
+on: push
+jobs:
+  m:
+    runs-on: macos-13
+    steps:
+      - run: sw_vers
